@@ -1,0 +1,125 @@
+<definitions xmlns:wsdlns="iag" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="iag" name="cotizacion" targetNamespace="iag">
+<types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="iag" elementFormDefault="qualified">
+<complexType name="sdtCotizacion">
+<sequence>
+<element name="Producto" type="tns:sdtCotizacion.Producto"> </element>
+<element name="Cliente" type="tns:sdtCotizacion.Cliente"> </element>
+<element name="Vehiculo" type="tns:sdtCotizacion.Vehiculo"> </element>
+<element name="Acces" type="tns:sdtCotizacion.Acces"> </element>
+</sequence>
+</complexType>
+<complexType name="sdtCotizacion.Producto">
+<sequence>
+<element name="ramo" type="xsd:string"> </element>
+<element name="TipoPlan" type="xsd:string"> </element>
+</sequence>
+</complexType>
+<complexType name="sdtCotizacion.Cliente">
+<sequence>
+<element name="Cedula" type="xsd:string"> </element>
+<element name="Nombre1" type="xsd:string"> </element>
+<element name="Nombre2" type="xsd:string"> </element>
+<element name="Apellidos1" type="xsd:string"> </element>
+<element name="Apellidos2" type="xsd:string"> </element>
+<element name="FechaNacimiento" type="xsd:date" nillable="true"> </element>
+<element name="Nacionalidad" type="xsd:string"> </element>
+<element name="Email1" type="xsd:string"> </element>
+<element name="Email2" type="xsd:string"> </element>
+<element name="Sueldo" type="xsd:double"> </element>
+<element name="Provincia" type="xsd:string"> </element>
+<element name="Canton" type="xsd:string"> </element>
+<element name="Parroquia" type="xsd:string"> </element>
+<element name="Telefono" type="xsd:string"> </element>
+<element name="telefono2" type="xsd:string"> </element>
+<element name="telefono3" type="xsd:string"> </element>
+<element name="Sexo" type="xsd:string"> </element>
+<element name="EstadoCivil" type="xsd:string"> </element>
+<element name="Empresa" type="xsd:string"> </element>
+<element name="Profesion" type="xsd:string"> </element>
+<element name="CargoLaboral" type="xsd:string"> </element>
+<element name="ActividadEco" type="xsd:string"> </element>
+<element name="CallePrincipal" type="xsd:string"> </element>
+<element name="Nro" type="xsd:string"> </element>
+<element name="CalleSecundaria" type="xsd:string"> </element>
+<element name="Referencia" type="xsd:string"> </element>
+<element name="TipoIDentificacion" type="xsd:string"> </element>
+</sequence>
+</complexType>
+<complexType name="sdtCotizacion.Vehiculo">
+<sequence>
+<element name="Placa" type="xsd:string"> </element>
+<element name="Chasis" type="xsd:string"> </element>
+<element name="Motor" type="xsd:string"> </element>
+<element name="Marca" type="xsd:int"> </element>
+<element name="MarcaDesc" type="xsd:string"> </element>
+<element name="Modelo" type="xsd:int"> </element>
+<element name="ModeloDesc" type="xsd:string"> </element>
+<element name="Clase" type="xsd:string"> </element>
+<element name="ClaseDesc" type="xsd:string"> </element>
+<element name="Tipo" type="xsd:string"> </element>
+<element name="Anio" type="xsd:short"> </element>
+<element name="Color" type="xsd:string"> </element>
+<element name="Ocupantes" type="xsd:short"> </element>
+<element name="Uso" type="xsd:string"> </element>
+<element name="Monto" type="xsd:double"> </element>
+</sequence>
+</complexType>
+<complexType name="sdtCotizacion.Acces">
+<sequence>
+<element name="token" type="xsd:string"> </element>
+<element name="control" type="xsd:int"> </element>
+</sequence>
+</complexType>
+<complexType name="sdtCotizacionError">
+<sequence>
+<element name="Error" type="xsd:short"> </element>
+<element name="Descripcion" type="xsd:string"> </element>
+</sequence>
+</complexType>
+<element name="cotizacion.Execute">
+<complexType>
+<sequence>
+<element minOccurs="1" maxOccurs="1" name="Sdtcotizacion" type="tns:sdtCotizacion"/>
+</sequence>
+</complexType>
+</element>
+<element name="cotizacion.ExecuteResponse">
+<complexType>
+<sequence>
+<element minOccurs="1" maxOccurs="1" name="Sdtcotizacionerror" type="tns:sdtCotizacionError"/>
+</sequence>
+</complexType>
+</element>
+</schema>
+</types>
+<message name="cotizacion.ExecuteSoapIn">
+<part name="parameters" element="tns:cotizacion.Execute"/>
+</message>
+<message name="cotizacion.ExecuteSoapOut">
+<part name="parameters" element="tns:cotizacion.ExecuteResponse"/>
+</message>
+<portType name="cotizacionSoapPort">
+<operation name="Execute">
+<input message="wsdlns:cotizacion.ExecuteSoapIn"/>
+<output message="wsdlns:cotizacion.ExecuteSoapOut"/>
+</operation>
+</portType>
+<binding name="cotizacionSoapBinding" type="wsdlns:cotizacionSoapPort">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<operation name="Execute">
+<soap:operation soapAction="iagaction/ACOTIZACION.Execute"/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+</binding>
+<service name="cotizacion">
+<port name="cotizacionSoapPort" binding="wsdlns:cotizacionSoapBinding">
+<soap:address location="http://64.46.75.92:8585/iagJavaEnvironment/servlet/com.iag.acotizacion"/>
+</port>
+</service>
+</definitions>

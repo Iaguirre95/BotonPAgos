@@ -1,0 +1,291 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25-jul-2018, 11:24:13
+    Author     : yoveri
+*/
+ .expand{
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+            .expand_border_3{
+                position: relative;
+                top: 3px;
+                left: 3px;
+                width: calc(100% - 6px);
+                height: calc(100% - 6px); 
+            }
+            .panel_main{
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+            }
+            .tab_horizontal{
+                position: relative;
+                top: 3px;
+                left: 3px;
+                width: calc(100% - 6px);
+                height: calc(100% - 6px); 
+            }
+            .tab_horizontal_activo{
+                border-left:  1px solid #c5dbec;
+                border-right: 1px solid #c5dbec;
+                border-top: 1px solid #c5dbec; 
+                border-bottom: 1px solid white;
+                width: 100px;
+                background: #fffff; 
+                font-weight: bold;
+                color: #2e6e9e;
+                font-size: 11px;
+                font-family:  Lucida Grande,Lucida Sans,Arial,sans-serif;
+            }
+            .tab_horizontal_inactivo{
+                width: 100px;
+                border-bottom: 1px solid #c5dbec;
+                background: #dfeffc url('../../scripts/jquery/jquery.ui/1.12/images/ui-bg_glass_85_dfeffc_1x400.png') 50% 50% repeat-x; 
+                border-color: #bce8f1;
+                font-weight: nomal;
+                cursor: pointer;
+                color: #2e6e9e; 
+                font-size: 11px;
+                font-family:  Lucida Grande,Lucida Sans,Arial,sans-serif;
+            }
+            .tab_horizontal_fixed{ 
+                border-bottom: 1px solid #c5dbec;
+                background: #dfeffc url('../../scripts/jquery/jquery.ui/1.12/images/ui-bg_glass_85_dfeffc_1x400.png') 50% 50% repeat-x; 
+                border-color: #bce8f1; 
+                border-right: 1px solid #d9edf7;
+            }
+            .tab_horizontal_contenido{
+                border-left:  1px solid #c5dbec;
+                border-right: 1px solid #c5dbec;
+                border-bottom: 1px solid #c5dbec; 
+                border-top: none;
+            }
+            .tab_horizontal_contenido_activo{ 
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%; 
+                display: block;
+            }
+            .tab_horizontal_contenido_inactivo{  
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%; 
+                display: none;
+            }
+            .tab_vertical{
+                position: relative;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;  
+            }
+            .tab_vertical_area{
+                position: relative;
+                top: 3px;
+                left: 3px;
+                width: calc(100% - 6px);
+                height: calc(100% - 6px); 
+                /*background: #dfeffc url('../../scripts/jquery/jquery.ui/1.12/images/ui-bg_glass_85_dfeffc_1x400.png') 50% 50% repeat-x; */
+            }
+            .tab_vertical_contenido_activo{
+                border-right: 1px solid #c5dbec;
+                border-top: 1px solid #c5dbec;
+                border-bottom: 1px solid #c5dbec; 
+                background: #ffffff;
+            }
+            tab_vertical_contenido_inactivo{
+                border: 1px solid #c5dbec; 
+            }
+            .tab_vertical_activo{
+                border-top: 1px solid #c5dbec;
+                border-bottom: 1px solid #c5dbec;
+                border-left: 1px solid #c5dbec;
+                background: #ffffff;
+                height: 30px;
+                cursor: pointer;
+                color: #2e6e9e; 
+                font-size: 11px;
+                font-weight: bold;
+                font-family:  Lucida Grande,Lucida Sans,Arial,sans-serif;
+                -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Safari */
+                 -khtml-user-select: none; /* Konqueror HTML */
+                   -moz-user-select: none; /* Firefox */
+                    -ms-user-select: none; /* Internet Explorer/Edge */
+                        user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+            } 
+            .tab_vertical_inactivo{ 
+                border-right: 1px solid #c5dbec;
+                height: 30px;
+                cursor: pointer;
+                color: #2e6e9e; 
+                font-size: 11px; 
+                font-family:  Lucida Grande,Lucida Sans,Arial,sans-serif;
+                -webkit-touch-callout: none; /* iOS Safari */
+                -webkit-user-select: none; /* Safari */
+                 -khtml-user-select: none; /* Konqueror HTML */
+                   -moz-user-select: none; /* Firefox */
+                    -ms-user-select: none; /* Internet Explorer/Edge */
+                        user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+            }
+            .tab_vertical_fixed{ 
+                border-right: 1px solid #c5dbec;
+            }
+            .td_numero{
+                width: 70px;
+                text-align: center;
+                outline: none;
+                font-family: arial;
+                font-size: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                
+            }
+            .td_moneda{
+                width: 80px;
+                text-align: right;
+                outline: none;
+                font-family: arial;
+                font-size: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .td_texto{ 
+                text-align: left;
+                outline: none;
+                font-family: arial;
+                font-size: 10px;
+            }
+            .td_observacion{ 
+                text-align: left;
+                outline: none;
+                font-family: arial;
+                font-size: 10px;
+                width: 160px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .td_id{
+                width: 80px;
+                text-align: left;
+                outline: none;
+                font-family: arial;
+                font-size: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            } 
+            .td_fecha{
+                width: 100px;
+                text-align: center;
+                outline: none;
+                font-family: arial;
+                font-size: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .td_estado{
+                width: 70px;
+                text-align: center;
+                outline: none;
+                font-family: arial;
+                font-size: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            } 
+            .spam_link{
+                color: blue;
+                cursor: pointer;
+                text-decoration: underline; 
+                text-align: center;
+                font-family: arial;
+                font-size: 10px;
+            }
+            .td_link_dia{
+                width: 25px !important;
+            }
+            .link_dia{
+                color: blue;
+                cursor: pointer;
+                text-decoration: underline; 
+                text-align: center;
+                font-family: arial;
+                font-size: 10px;
+                
+            }
+            .link_dia_select{
+                color: #e14f1c;   
+                text-align: center;
+                font-family: arial;
+                font-size: 10px;
+            }
+            .td_cabecera{
+                border: 1px solid #c5dbec; 
+                border-bottom: none;  
+                font-weight: bold;
+                background: #dfeffc url('../../scripts/jquery/jquery.ui/1.12/images/ui-bg_glass_85_dfeffc_1x400.png') 50% 50% repeat-x; 
+                color: #2e6e9e; 
+                text-align: center;
+                font-size: 11px;
+                font-family:  Lucida Grande,Lucida Sans,Arial,sans-serif;
+            }
+            .td_total{
+                border: 1px solid #c5dbec; 
+                border-bottom: none;   
+                text-align: right;
+                font-weight: bold;
+            }
+            .td_funcion{
+                width: 22px !important;
+                text-align: center;
+                outline: none;
+            }
+            .div_procesando{
+                position: absolute;
+                z-index: 10;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%; 
+                background: rgba(1, 1, 1, 0.4);
+            }
+            .tr_style{
+                height: 25px !important;
+                background: transparent;
+            }
+            .tr_style_det{
+                height: 25px !important;
+                background: transparent;
+            }
+            
+            .tr_select{
+                background: #fbec88;
+                border: 1px solid #fad42e;
+                color: #363636;
+                height: 25px !important;
+            } 
+            .tr_select_det{
+                background: #fbec88;
+                border: 1px solid #fad42e;
+                color: #363636;
+                height: 25px !important;
+            }

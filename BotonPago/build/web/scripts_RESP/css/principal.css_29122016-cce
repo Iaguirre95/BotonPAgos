@@ -1,0 +1,124 @@
+.titulo{font-family:"Verdana";
+        font-size:8pt;
+        font-weight:bold;
+        color:#000000}
+.titulo1{font-family:"Verdana";
+         font-size:12pt;
+         font-weight:bold;
+         color:#000000}
+.titulo2{font-family:"Verdana";
+         font-size:24pt;
+         font-weight:bold;
+         color:#000000}
+.titulo18{font-family:"Verdana";
+         font-size:18pt;
+         font-weight:bold;
+         color:#000000}
+.titulo20{font-family:"Verdana";
+         font-size:20pt;
+         font-weight:bold;
+         color:#000000}
+.titulo22{font-family:"Verdana";
+         font-size:22pt;
+         font-weight:bold;
+         color:#000000}
+.etiqueta_formulario{font-family:"Verdana";
+                     font-size:8pt;
+                     background-color:#848484;
+                     font-weight:bold;
+                     color:#FFFFFF}
+
+
+
+.etiqueta_formulario_10{font-family:"Verdana";
+                        font-size:10pt;
+                        font-weight:bold;
+                        text-align: left;
+                        color:#000000}
+.detalle_formulario{font-family:"Verdana";font-size:8pt;background-color:#FFFFFF;color:#000000}
+.detalle_formulario_10{font-family:"Verdana";
+                       font-size:10pt;
+                       font-weight:normal;
+                       color:#000000}
+.titulo_tabla{font-family:"Verdana";font-size:8pt;background-color:#0174DF;color:#FFFFFF}
+.detalle_tabla{font-family:"Verdana";font-size:8pt;background-color:#E6E6E6;color:#000000}
+.detalle_tabla_adic{font-family:"Verdana";font-size:8pt;background-color:#848484;color:#000000}
+.color_barra{SCROLLBAR-FACE-COLOR: #FFFFFF; SCROLLBAR-HIGHLIGHT-COLOR: #FFFFFF; SCROLLBAR-SHADOW-COLOR: #FFFFFF; SCROLLBAR-3DLIGHT-COLOR: #585858; SCROLLBAR-ARROW-COLOR: #585858; SCROLLBAR-TRACK-COLOR: #FFFFFF; SCROLLBAR-DARKSHADOW-COLOR: #585858;}
+.enlaces{font-family:Verdana;font-size:8pt;color:#000099}
+.radio_button{font-family:Verdana;font-size:13pt;color:#0071BB}
+
+.MarcoTitulo {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #d7d7d7;
+    font-size: 12px;
+    color:#000000;
+    font-weight:bold;
+}
+.tablas {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 34px;
+}
+.tituloVentana {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    color: #0071BB;
+    font-weight: bold;
+}
+
+.SubtituloVentana {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    color: #0071BB;
+    font-weight: bold;
+}
+
+.CampoMensaje {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    color: #000000;
+    font-weight: bold;
+    /*border: medium inset #0071BB;*/
+    border-top: 2px solid #0071BB;
+    border-right: 2px solid #0071BB;
+    border-bottom: 2px solid #0071BB;
+    border-left: 2px solid #0071BB;
+
+    border-image: none;
+    width: 350px;
+    height: 150px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #FFFFFF;
+    position: absolute; 
+    top: 70px;
+    left: 50px;
+
+}
+.ventanaPrincipal {
+    width: 370px;
+    height: 255px;
+    -moz-border-radius:9px;
+    -webkit-border-radius:9px;
+    border-radius:9px;
+    margin: 150px auto 0;
+    /*background: url(../../imagenes/fondo.jpg) top left;*/
+    padding: 8px 0 0 8px; 
+}
+.ventana-flotante {
+    display:none;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url(../../imagenes/fondo-inicio.png);
+}
+.ventana-oculta {
+display:none;
+margin: 0 auto;
+text-align: center;
+}
+.div_sin_margen {
+border: 1px solid #ccdacc;
+
+}

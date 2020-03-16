@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1">
+        <file>
+            <url>web/paginas/bin/pago.jsp</url>
+            <line>340</line>
+            <line>538</line>
+        </file>
+    </editor-bookmarks>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0">
+        <file>
+            <url>web/paginas/bin/pago.jsp</url>
+            <bookmark id="0">
+                <name/>
+                <line>351</line>
+                <key/>
+            </bookmark>
+            <bookmark id="0">
+                <name/>
+                <line>549</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/datos/BotonPago/src/java/dao/DAOCheckoutId.java</file>
+            <file>file:/C:/datos/BotonPago/web/scripts_RESP/general/bloqueo.js</file>
+            <file>file:/C:/datos/BotonPago/web/index.jsp</file>
+            <file>file:/C:/datos/BotonPago/web/paginas/bin/pago.jsp</file>
+            <file>file:/C:/datos/BotonPago/web/paginas/bin/preguntas_frecuentes.jsp</file>
+            <file>file:/C:/datos/BotonPago/src/java/dao/DAOTransacciones.java</file>
+            <file>file:/C:/datos/BotonPago/web/paginas/bin/procesaPago.jsp</file>
+            <file>file:/C:/datos/BotonPago/src/java/bin/Transacciones.java</file>
+            <file>file:/C:/datos/BotonPago/src/java/WS/Consultas.java</file>
+            <file>file:/C:/datos/BotonPago/src/java/bin/Parametros.java</file>
+        </group>
+    </open-files>
+</project-private>

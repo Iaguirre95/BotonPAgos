@@ -1,0 +1,163 @@
+.div_loop{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 99.50%;
+    height: 99.50%;
+    overflow: hidden;
+    display: table;
+    background: rgba(36,36,36,0.4);
+    border: 1px solid #BEBEBE;
+    z-index: 350;
+}
+.cab-formulario{
+    font-family: "Verdana";
+    font-size: 20px;
+    color: white;
+    background-color: #585858;
+}
+
+.form-control{
+    display: block;
+    width: 98%;
+    height: 25px;
+    padding: 0px 5px;
+    font-size: 11px;
+    line-height: 1.428571429;
+    color: #000000;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.titulo_formulario {
+    /* font-family: "Verdana"; */
+    font-size: 11pt;
+    font-weight: bold;
+    color: #0174DF;
+}
+
+.titulo{font-family:"Verdana";
+        font-size:12px;
+        font-weight:bold;
+        /*color:#0071BB;*/
+        color:#428bca;
+
+        /*color:#000000*/}
+.titulo1{font-family:"Verdana";
+         font-size:14pt;
+         font-weight:bold;
+         color:#428bca;
+         /*color:#000000*/}
+.titulo2{font-family:"Verdana";
+         font-size:24pt;
+         color:#428bca;
+         font-weight:bold;
+         /*color:#0071BB;*/
+         /*color:#000000*/}
+.etiqueta_formulario{font-family:"Verdana";
+                     font-size:8pt;
+                     background-color:#848484;
+                     color:#FFFFFF}
+.etiqueta_formulario_10{font-family:"Verdana";
+                        font-size:10pt;
+                        font-weight:bold;
+                        text-align: left;
+                        color:#000000}
+.etiqueta_formulario_c{font-family:"Verdana";
+                       font-size:10pt;
+                       font-weight:bold;
+                       text-align: left;
+                       color:#0174DF}
+
+.detalle_formulario{font-family:"Verdana";font-size:8pt;
+                    color:#0071BB;
+                    /*background-color:#FFFFFF;*/
+                    /*color:#000000*/}
+.detalle_formulario_10{font-family:"Verdana";
+                       font-size:10pt;
+                       font-weight:normal;
+                       color:#000000}
+.titulo_tabla{font-family:"Verdana";font-size:8pt;background-color:#0174DF;color:#FFFFFF}
+.detalle_tabla{font-family:"Verdana";font-size:8pt;background-color:#E6E6E6;color:#000000}
+.detalle_tabla_adic{font-family:"Verdana";font-size:8pt;background-color:#848484;color:#000000}
+.color_barra{SCROLLBAR-FACE-COLOR: #FFFFFF; SCROLLBAR-HIGHLIGHT-COLOR: #FFFFFF; SCROLLBAR-SHADOW-COLOR: #FFFFFF; SCROLLBAR-3DLIGHT-COLOR: #585858; SCROLLBAR-ARROW-COLOR: #585858; SCROLLBAR-TRACK-COLOR: #FFFFFF; SCROLLBAR-DARKSHADOW-COLOR: #585858;}
+.enlaces{font-family:Verdana;font-size:"8"pt;color:#000099}
+.radio_button{font-family:Verdana;font-size:13pt;color:#0071BB}
+
+.MarcoTitulo {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: #d7d7d7;
+    font-size: 12px;
+    color:#000000;
+    font-weight:bold;
+}
+.tablas {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 34px;
+}
+.tituloVentana {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    color: #0071BB;
+    font-weight: bold;
+}
+
+.SubtituloVentana {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    color: #0071BB;
+    font-weight: bold;
+}
+
+.CampoMensaje {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    color: #000000;
+    font-weight: bold;
+    /*border: medium inset #0071BB;*/
+    border-top: 2px solid #0071BB;
+    border-right: 2px solid #0071BB;
+    border-bottom: 2px solid #0071BB;
+    border-left: 2px solid #0071BB;
+
+    border-image: none;
+    width: 350px;
+    height: 150px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #FFFFFF;
+    position: absolute; 
+    top: 70px;
+    left: 50px;
+
+}
+.ventanaPrincipal {
+    width: 370px;
+    height: 255px;
+    -moz-border-radius:9px;
+    -webkit-border-radius:9px;
+    border-radius:9px;
+    margin: 150px auto 0;
+    /*background: url(../../imagenes/fondo.jpg) top left;*/
+    padding: 8px 0 0 8px; 
+}
+.ventana-flotante {
+    display:none;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url(../../imagenes/fondo-inicio.png);
+}
+.ventana-oculta {
+    display:none;
+    margin: 0 auto;
+    text-align: center;
+}

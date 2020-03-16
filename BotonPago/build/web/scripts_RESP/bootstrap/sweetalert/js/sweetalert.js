@@ -1,0 +1,123 @@
+var $pObjeto;
+var $pObjetoError;
+var $pObjetoTipoError;
+var $pObjetoMensaje;
+var $pObjetoCausa;
+var $pObjetoAccion;
+var $pObjetoCodigoError;
+
+$(document).on('click', '.aceptar', function () {
+   // Event Handler Code here
+   swal.close();
+});
+
+function createBtn(text, cb) {
+	return $(text).on('click', cb);
+}
+function divMensaje(mensaje, TipoMensaje){
+	var ltipoMensaje = "";
+	var imagen ="";
+	$pObjetoTipoError = TipoMensaje;
+	if(TipoMensaje=="E")
+		imagen = "Icoalerta.png";
+	if(TipoMensaje=="X")
+		imagen = "Icoerror.png";
+	if(TipoMensaje=="M")
+		imagen = "Icoexito.png";
+	if($pObjetoMensaje==undefined)
+		$pObjetoMensaje = mensaje;
+	if(TipoMensaje!="M")
+		ltipoMensaje ='							<button tabindex="2"  type="button" name="bAyuda" value=""  class="btn btn-primary btn btn-info ayuda" id="bAyuda"><img src="../../imagenes/icoayuda.png" width="15" height="15" border="0" alt="">&nbsp;&nbsp;Ayuda&nbsp;</button>';
+	return ' <form id="cuerpo" name="cuerpo">'
+    +'   <input type="hidden" name="accion" id="accion" value="O">'
+    +'		<div class="row center-block" style="width: 570px; margin-top: -5px; margin-left: -20px; margin-bottom: -25px;height: 32%; position: relative; ">'
+	+'		    <div id="signupbox" class="mainbox col-md-12">'
+	+'		        <div class="panel panel-info">'
+	+'		            <div class="panel-heading" style="height: 1px">'
+	+'		                <div class="panel-title titulo" style="margin-top: -10px"><div class="text-left">Mensaje del Sistema - Axis Versi\u00F3n 4.1</div></div>'
+	+'		            </div>'
+	+'		            <div class="panel-body">'
+	+'						  <div class="col-xs-2 center" style="margin-left: -10px;margin-bottom: 0px;">'
+	+'							<img  src="../../imagenes/'+imagen+'" align="middle"  border="0" alt="" height="70" width="70">'
+	+'			              </div>'
+	+'						  <div class="col-xs-9 center_text" style="margin-bottom: 0px;">'
+	+'						    <textarea class="" cols="16" rows="4" style="border: none;background-color:#FFFFF"  readonly>'+mensaje+'</textarea>'
+	+'			              </div>'
+	+'						  <div class="col-xs-1 center_btn" style="margin-bottom: 0px;">'
+	+'							<button tabindex="1" style="outline: 0;" type="button" name="bAceptar" value=""  class="btn btn-primary btn btn-info aceptar" id="bAceptar"><img src="../../imagenes/icoaceptar2.png" width="15" height="15" border="0" alt="">&nbsp;Aceptar</button><br><br>'
+	+ltipoMensaje
+	+'						  </div>'
+	+'		              	  <div id="ayuda" class="row col-xs-12" style="width: 111.1%;margin-left: -30px;display:none"></div>'
+	+'  				</div>'//body
+	+'		        </div>'
+	+'		    </div>'
+	+'		</div>'
+	+'   </form>';
+}
+
+$(document).on('click', '.aceptar', function () {
+    if($pObjeto!=null)
+        $pObjeto.focus();
+})
+
+$(document).on('click', '.ayuda', function () {
+	 if (document.getElementById('accion').value == "O")
+	 {
+		 if($pObjetoError==undefined)
+			 $pObjetoError = "";
+		 var lserror = $pObjetoError;
+         var ls_tipo_error= $pObjetoTipoError;
+
+         if($pObjetoCausa==undefined)
+        	 $pObjetoCausa = "";
+         if($pObjetoAccion==undefined)
+        	 $pObjetoAccion = "";
+         if($pObjetoCodigoError==undefined)
+        	 $pObjetoCodigoError = "";
+         var ls_mensaje= " <div style=\"text-align: left;border-style: none; border-width: 20px;\"> "
+                        +"    <div class=\"titulo_formulario\">Mensaje:</div> "
+                        +" </div> "
+                        +" <br><div class=\"col-xs-12\" style=\"width: 100%;\">"
+                        +"     <textarea style=\"width: 108%;\" class=\"control form-control\" rows=\"3\" cols=\"60\" readonly>"+$pObjetoMensaje+"</textarea> "
+                        +" </div> ";
+
+          var ls_causa = "";
+              ls_causa = " <div style=\"text-align: left;border-style: none; border-width: 20px;\">"
+              ls_causa = ls_causa + "<div class=\"titulo_formulario\">Causa:</div> "
+              ls_causa = ls_causa + " </div> "
+              ls_causa = ls_causa +" <br><div class=\"col-xs-12\" style=\"width: 100%;\">"
+              ls_causa = ls_causa +"    <textarea style=\"width: 108%;\" class=\"control form-control\" rows=\"3\" cols=\"60\" readonly>"+$pObjetoCausa+"</textarea> "
+              ls_causa = ls_causa +" </div> ";
+
+          var ls_accion= "";
+              ls_accion= " <div style=\"text-align: left;border-style: none; border-width: 20px;\"> "
+                      +"      <div class=\"titulo_formulario\">Acci\u00F3n:</div> "
+                      +"  </div> "
+                      +" <br><div class=\"col-xs-12\" style=\"width: 100%;\">"
+                      +"      <textarea style=\"width: 108%;\" class=\"control form-control\" rows=\"3\" cols=\"60\" readonly>"+$pObjetoAccion+"</textarea> "
+                      +"   </div> ";
+          var ls_tecnico= "";
+              ls_tecnico= "<div style=\"text-align: left;border-style: none; border-width: 20px;\"> "
+                      +" <div class=\"titulo_formulario\">T\u00e9cnico:</div>  ";
+              if (ls_tipo_error == "E"){
+                 ls_tecnico = ls_tecnico +" <div class=\"titulo_formulario col-md-6 \"><span style=\"float: right;margin-right: -25px\"> C\u00F3digo:"+$pObjetoCodigoError+"</span></div> ";
+              }
+              ls_tecnico = ls_tecnico +" </div> "
+                      +" <br><div class=\"col-xs-12\" style=\"width: 100%;\">"
+                      +" <textarea style=\"width: 108%;\" class=\"control form-control\" rows=\"3\" cols=\"60\" id=\"tecnico\" name=\"tecnico\" readonly>"+lserror
+                      +" </textarea> "
+                      +"      </div> "
+                      +"  </div> ";
+        	 $('#ayuda').html("<div class=\"panel-footer col-xs-12\"> "+ls_mensaje+ls_causa+ls_accion+ls_tecnico+"</div>");
+             $('#ayuda').slideDown(500);
+             document.getElementById('accion').value = "V";
+             document.getElementById('bAyuda').value = "Ocultar";
+       } else{
+             if (document.getElementById('accion').value == "V"){
+                    document.getElementById('accion').value = "O";
+                    $('#ayuda').html("");
+                    $('#ayuda').slideUp(500);
+                    document.getElementById('bAyuda').value = "Ayuda";
+                }
+        }
+})

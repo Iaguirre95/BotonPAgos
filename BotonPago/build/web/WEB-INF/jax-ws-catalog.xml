@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/datos/flo/proyectos/netbeans/mkBotonPago/web/WEB-INF/com_iag_acotizacion.wsdl" uri="wsdl/com_iag_acotizacion.wsdl"/>
+    <system systemId="file:/C:/datos/flo/proyectos/netbeans/alianza/web/WEB-INF/alianza-cotizacion.wsdl" uri="wsdl/alianza-cotizacion.wsdl"/>
+    <system systemId="file:/C:/datos/flo/proyectos/netbeans/alianza/web/WEB-INF/com_iag_acotizacion.wsdl" uri="wsdl/com_iag_acotizacion.wsdl"/>
+</catalog>

@@ -1,0 +1,7 @@
+@CHARSET "UTF-8";
+i#displayMessage{
+	display: none;
+	font-family:"Verdana";
+	color:#000088;
+	font-size:-3;	
+}

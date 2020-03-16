@@ -1,0 +1,34 @@
+<link rel="stylesheet" type="text/css" href="/src/css/jscal2.css" />
+<link rel="stylesheet" type="text/css" href="/src/css/border-radius.css" />
+<link rel="stylesheet" type="text/css" href="/src/css/steel/steel.css" />
+<script type="text/javascript" src="/src/js/jscal2.js"></script>
+<script type="text/javascript" src="/src/js/lang/es.js"></script>
+
+
+
+
+<label for="f_rangeStart">Campo Fecha:</label> </td>
+<input size="15" id="f_rangeStart" />
+<button id="f_rangeStart_trigger">...</button>
+<button id="f_clearRangeStart" onclick="clearRangeStart()">Limpiar</button>
+
+ <script type="text/javascript">
+ RANGE_CAL_1 = new Calendar({
+ inputField: "f_rangeStart",
+ dateFormat: "%Y/%m/%d",
+ trigger: "f_rangeStart_trigger",
+ bottomBar: false,
+ onSelect: function() {
+ var date = Calendar.intToDate(this.selection.get());
+ LEFT_CAL.args.min = date;
+ LEFT_CAL.redraw();
+ this.hide();
+ }
+ });
+ function clearRangeStart() {
+ document.getElementById("f_rangeStart").value = "";
+ LEFT_CAL.args.min = null;
+ LEFT_CAL.redraw();
+ };
+</script>
+-------------------------------------------------------------------------------------------------------
